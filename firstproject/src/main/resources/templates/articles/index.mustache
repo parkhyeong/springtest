@@ -1,0 +1,27 @@
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {{#articleList}}
+        <tr>
+            <th scope="row">{{id}}</th>
+            <td><a style="text-decoration-line:none" href="/articles/{{id}}">{{title}}</a></td>
+            <td>{{content}}</td>
+            <td><div class="yt-spec-touch-feedback-shape__fill" style=""></div></td>
+        </tr>
+    {{/articleList}}
+
+    </tbody>
+</table>
+
+<button type="button" style="margin-left: 10px" onclick="window.location.href='/articles/new'">글쓰기</button>
+
+{{>layouts/footer}}

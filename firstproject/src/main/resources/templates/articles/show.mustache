@@ -1,0 +1,16 @@
+{{>layouts/header}}
+
+
+    {{#article}}
+        <h3 style="margin-left: 10px" class="title_text">{{title}}</h3>
+<br>
+        <span style="margin-left: 10px">{{content}}</span>
+
+    {{/article}}
+
+<br><br><br>
+
+<a style="margin-left: 10px" href="/articles/{{article.id}}/edit" class="btn btn-primary">수정</a>
+<a style="margin-left: 10px" href="/articles/{{article.id}}/delete" class="btn btn-danger">삭제</a>
+<button type="button" style="margin-left: 10px" onclick="window.location.href='/articles'">목록</button>
+{{>layouts/footer}}
